@@ -1,0 +1,18 @@
+//
+//  PchFile.pch
+//  BXM
+//
+//  Created by 宋庆亮 on 16/1/15.
+//  Copyright © 2016年 宋庆亮. All rights reserved.
+//
+
+#ifndef PchFile_pch
+#define PchFile_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "APPHeader.h"
+#import "KEYHeader.h"
+#import "THRHeader.h"
+#import "URLHeader.h"
+#endif /* PchFile_pch */
