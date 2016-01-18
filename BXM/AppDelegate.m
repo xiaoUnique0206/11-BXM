@@ -30,9 +30,9 @@
     UINavigationController *nav4 = [[UINavigationController alloc]initWithRootViewController:moveTVC];
     NSArray *array = @[nav1,nav2,nav3,nav4];
     UITabBarController *tabbar = [UITabBarController new];
+    tabbar.tabBar.barTintColor = [UIColor blackColor];
     tabbar.viewControllers = array;
     self.window.rootViewController = tabbar;
-
     return YES;
 }
 

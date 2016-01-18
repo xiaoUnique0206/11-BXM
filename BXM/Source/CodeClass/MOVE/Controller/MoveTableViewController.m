@@ -16,7 +16,7 @@
 
 - (instancetype)initWithStyle:(UITableViewStyle)style{
     if (self = [super initWithStyle:style]) {
-        self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:[UIImage imageNamed:@"iconfont-gengduo-2"] tag:1001];
+        self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"更多" image:[UIImage imageNamed:@"iconfont-lanmudaohang"] tag:1001];
         
     }
     return self;

@@ -21,7 +21,9 @@ static NSString *const footIdent = @"footCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"我的栏目" image:[UIImage imageNamed:@"iconfont-lanmu-2"] tag:1001];
+    self.tabBarController.tabBar.tintColor = [UIColor purpleColor];
+    self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
 
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{

@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor yellowColor];
-    self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"新闻速读" image:[UIImage imageNamed:@"iconfont-wangluokeji"] tag:1001];
+    self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"新闻速读" image:[UIImage imageNamed:@"iconfont-fangzi"] tag:1001];
     self.tabBarController.tabBar.tintColor = [UIColor purpleColor];
     self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
     

@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A1A3C291C4CC50A00556E14 /* aaaaa.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A3C281C4CC50A00556E14 /* aaaaa.m */; };
-		6A1A3C2C1C4CC51800556E14 /* aaaaaaaa.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A3C2B1C4CC51800556E14 /* aaaaaaaa.m */; };
-		6A1A3C2F1C4CC52200556E14 /* xxx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A3C2E1C4CC52200556E14 /* xxx.m */; };
+		6A05E7551C4CEBFA009CEFDE /* SelectShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A05E7541C4CEBFA009CEFDE /* SelectShare.m */; };
+		6A1A3C371C4CCE1500556E14 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A3C311C4CCE1500556E14 /* README.md */; };
+		6A1A3C381C4CCE1500556E14 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A3C331C4CCE1500556E14 /* XMLReader.m */; };
+		6A1A3C391C4CCE1500556E14 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A3C361C4CCE1500556E14 /* XMLWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6A1A3C461C4CD96600556E14 /* iconfont-fangzi.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A1A3C421C4CD96600556E14 /* iconfont-fangzi.png */; };
+		6A1A3C471C4CD96600556E14 /* iconfont-lanmu-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A1A3C431C4CD96600556E14 /* iconfont-lanmu-2.png */; };
+		6A1A3C481C4CD96600556E14 /* iconfont-lanmudaohang.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A1A3C441C4CD96600556E14 /* iconfont-lanmudaohang.png */; };
+		6A1A3C491C4CD96600556E14 /* iconfont-wangluokeji.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A1A3C451C4CD96600556E14 /* iconfont-wangluokeji.png */; };
 		6A3C92621C48E76800A65B5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C92611C48E76800A65B5C /* main.m */; };
 		6A3C92651C48E76800A65B5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C92641C48E76800A65B5C /* AppDelegate.m */; };
 		6A3C92681C48E76800A65B5C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C92671C48E76800A65B5C /* ViewController.m */; };
 		6A3C926B1C48E76800A65B5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C92691C48E76800A65B5C /* Main.storyboard */; };
 		6A3C926D1C48E76800A65B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C926C1C48E76800A65B5C /* Assets.xcassets */; };
 		6A3C92701C48E76800A65B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C926E1C48E76800A65B5C /* LaunchScreen.storyboard */; };
-		6A3C92D51C48F57B00A65B5C /* iconfont-gengduo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C92CF1C48F57B00A65B5C /* iconfont-gengduo-2.png */; };
-		6A3C92D61C48F57B00A65B5C /* iconfont-jingxuan.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C92D01C48F57B00A65B5C /* iconfont-jingxuan.png */; };
-		6A3C92D71C48F57B00A65B5C /* iconfont-shandianline.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C92D11C48F57B00A65B5C /* iconfont-shandianline.png */; };
 		C25DF0B01C4C817A007BE533 /* ColumnCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25DF0871C4C817A007BE533 /* ColumnCollectionViewController.m */; };
 		C25DF0B11C4C817A007BE533 /* Column.m in Sources */ = {isa = PBXBuildFile; fileRef = C25DF08A1C4C817A007BE533 /* Column.m */; };
 		C25DF0B21C4C817A007BE533 /* ColumnCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25DF08D1C4C817A007BE533 /* ColumnCollectionViewCell.m */; };
@@ -38,12 +40,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6A1A3C271C4CC50A00556E14 /* aaaaa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aaaaa.h; sourceTree = "<group>"; };
-		6A1A3C281C4CC50A00556E14 /* aaaaa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aaaaa.m; sourceTree = "<group>"; };
-		6A1A3C2A1C4CC51800556E14 /* aaaaaaaa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aaaaaaaa.h; sourceTree = "<group>"; };
-		6A1A3C2B1C4CC51800556E14 /* aaaaaaaa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aaaaaaaa.m; sourceTree = "<group>"; };
-		6A1A3C2D1C4CC52200556E14 /* xxx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xxx.h; sourceTree = "<group>"; };
-		6A1A3C2E1C4CC52200556E14 /* xxx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xxx.m; sourceTree = "<group>"; };
+		6A05E7531C4CEBFA009CEFDE /* SelectShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectShare.h; sourceTree = "<group>"; };
+		6A05E7541C4CEBFA009CEFDE /* SelectShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectShare.m; sourceTree = "<group>"; };
+		6A1A3C311C4CCE1500556E14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6A1A3C321C4CCE1500556E14 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		6A1A3C331C4CCE1500556E14 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		6A1A3C351C4CCE1500556E14 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
+		6A1A3C361C4CCE1500556E14 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
+		6A1A3C421C4CD96600556E14 /* iconfont-fangzi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-fangzi.png"; sourceTree = "<group>"; };
+		6A1A3C431C4CD96600556E14 /* iconfont-lanmu-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-lanmu-2.png"; sourceTree = "<group>"; };
+		6A1A3C441C4CD96600556E14 /* iconfont-lanmudaohang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-lanmudaohang.png"; sourceTree = "<group>"; };
+		6A1A3C451C4CD96600556E14 /* iconfont-wangluokeji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-wangluokeji.png"; sourceTree = "<group>"; };
 		6A3C925D1C48E76800A65B5C /* BXM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BXM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3C92611C48E76800A65B5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A3C92631C48E76800A65B5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -59,9 +66,6 @@
 		6A3C92821C48E7E400A65B5C /* THRHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THRHeader.h; sourceTree = "<group>"; };
 		6A3C92831C48E7E400A65B5C /* URLHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLHeader.h; sourceTree = "<group>"; };
 		6A3C92B21C48E9EF00A65B5C /* PchFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PchFile.pch; sourceTree = "<group>"; };
-		6A3C92CF1C48F57B00A65B5C /* iconfont-gengduo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-gengduo-2.png"; sourceTree = "<group>"; };
-		6A3C92D01C48F57B00A65B5C /* iconfont-jingxuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-jingxuan.png"; sourceTree = "<group>"; };
-		6A3C92D11C48F57B00A65B5C /* iconfont-shandianline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-shandianline.png"; sourceTree = "<group>"; };
 		C25DF0861C4C817A007BE533 /* ColumnCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnCollectionViewController.h; sourceTree = "<group>"; };
 		C25DF0871C4C817A007BE533 /* ColumnCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnCollectionViewController.m; sourceTree = "<group>"; };
 		C25DF0891C4C817A007BE533 /* Column.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Column.h; sourceTree = "<group>"; };
@@ -103,6 +107,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A1A3C301C4CCE1500556E14 /* XMLReader-master */ = {
+			isa = PBXGroup;
+			children = (
+				6A1A3C311C4CCE1500556E14 /* README.md */,
+				6A1A3C321C4CCE1500556E14 /* XMLReader.h */,
+				6A1A3C331C4CCE1500556E14 /* XMLReader.m */,
+				6A1A3C341C4CCE1500556E14 /* xmlwriter */,
+			);
+			path = "XMLReader-master";
+			sourceTree = "<group>";
+		};
+		6A1A3C341C4CCE1500556E14 /* xmlwriter */ = {
+			isa = PBXGroup;
+			children = (
+				6A1A3C351C4CCE1500556E14 /* XMLWriter.h */,
+				6A1A3C361C4CCE1500556E14 /* XMLWriter.m */,
+			);
+			path = xmlwriter;
+			sourceTree = "<group>";
+		};
+		6A1A3C411C4CD96600556E14 /* icnfont */ = {
+			isa = PBXGroup;
+			children = (
+				6A1A3C421C4CD96600556E14 /* iconfont-fangzi.png */,
+				6A1A3C431C4CD96600556E14 /* iconfont-lanmu-2.png */,
+				6A1A3C441C4CD96600556E14 /* iconfont-lanmudaohang.png */,
+				6A1A3C451C4CD96600556E14 /* iconfont-wangluokeji.png */,
+			);
+			path = icnfont;
+			sourceTree = "<group>";
+		};
 		6A3C92541C48E76800A65B5C = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +160,7 @@
 				6A3C92661C48E76800A65B5C /* ViewController.h */,
 				6A3C92671C48E76800A65B5C /* ViewController.m */,
 				6A3C92B21C48E9EF00A65B5C /* PchFile.pch */,
+				6A1A3C301C4CCE1500556E14 /* XMLReader-master */,
 				6A3C92771C48E7E400A65B5C /* Source */,
 				6A3C92691C48E76800A65B5C /* Main.storyboard */,
 				6A3C926C1C48E76800A65B5C /* Assets.xcassets */,
@@ -169,8 +205,8 @@
 		6A3C92791C48E7E400A65B5C /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
-				6A1A3C271C4CC50A00556E14 /* aaaaa.h */,
-				6A1A3C281C4CC50A00556E14 /* aaaaa.m */,
+				6A05E7531C4CEBFA009CEFDE /* SelectShare.h */,
+				6A05E7541C4CEBFA009CEFDE /* SelectShare.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -189,8 +225,6 @@
 		6A3C927E1C48E7E400A65B5C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				6A1A3C2A1C4CC51800556E14 /* aaaaaaaa.h */,
-				6A1A3C2B1C4CC51800556E14 /* aaaaaaaa.m */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -209,7 +243,7 @@
 		6A3C92841C48E7E400A65B5C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6A3C92CC1C48F57B00A65B5C /* icnfont */,
+				6A1A3C411C4CD96600556E14 /* icnfont */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,21 +251,8 @@
 		6A3C92851C48E7E400A65B5C /* TheThird */ = {
 			isa = PBXGroup;
 			children = (
-				6A1A3C2D1C4CC52200556E14 /* xxx.h */,
-				6A1A3C2E1C4CC52200556E14 /* xxx.m */,
 			);
 			path = TheThird;
-			sourceTree = "<group>";
-		};
-		6A3C92CC1C48F57B00A65B5C /* icnfont */ = {
-			isa = PBXGroup;
-			children = (
-				6A3C92CF1C48F57B00A65B5C /* iconfont-gengduo-2.png */,
-				6A3C92D01C48F57B00A65B5C /* iconfont-jingxuan.png */,
-				6A3C92D11C48F57B00A65B5C /* iconfont-shandianline.png */,
-			);
-			name = icnfont;
-			path = ../../icnfont;
 			sourceTree = "<group>";
 		};
 		C25DF0841C4C817A007BE533 /* COLUMN */ = {
@@ -444,14 +465,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A3C92D51C48F57B00A65B5C /* iconfont-gengduo-2.png in Resources */,
+				6A1A3C471C4CD96600556E14 /* iconfont-lanmu-2.png in Resources */,
 				C25DF0B31C4C817A007BE533 /* ColumnCollectionViewCell.xib in Resources */,
+				6A1A3C481C4CD96600556E14 /* iconfont-lanmudaohang.png in Resources */,
 				C25DF0B71C4C817A007BE533 /* MoveTableViewCell.xib in Resources */,
+				6A1A3C461C4CD96600556E14 /* iconfont-fangzi.png in Resources */,
 				C25DF0BB1C4C817A007BE533 /* NewsTableViewCell.xib in Resources */,
 				6A3C92701C48E76800A65B5C /* LaunchScreen.storyboard in Resources */,
-				6A3C92D61C48F57B00A65B5C /* iconfont-jingxuan.png in Resources */,
+				6A1A3C491C4CD96600556E14 /* iconfont-wangluokeji.png in Resources */,
 				C25DF0BF1C4C817A007BE533 /* SelectTableViewCell.xib in Resources */,
-				6A3C92D71C48F57B00A65B5C /* iconfont-shandianline.png in Resources */,
 				6A3C926D1C48E76800A65B5C /* Assets.xcassets in Resources */,
 				6A3C926B1C48E76800A65B5C /* Main.storyboard in Resources */,
 			);
@@ -464,22 +486,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A1A3C2F1C4CC52200556E14 /* xxx.m in Sources */,
+				6A1A3C391C4CCE1500556E14 /* XMLWriter.m in Sources */,
 				C25DF0B61C4C817A007BE533 /* MoveTableViewCell.m in Sources */,
+				6A1A3C381C4CCE1500556E14 /* XMLReader.m in Sources */,
 				C25DF0BD1C4C817A007BE533 /* Select.m in Sources */,
 				C25DF0B51C4C817A007BE533 /* Move.m in Sources */,
 				C25DF0BA1C4C817A007BE533 /* NewsTableViewCell.m in Sources */,
 				C25DF0B21C4C817A007BE533 /* ColumnCollectionViewCell.m in Sources */,
 				C25DF0B11C4C817A007BE533 /* Column.m in Sources */,
 				C25DF0B01C4C817A007BE533 /* ColumnCollectionViewController.m in Sources */,
-				6A1A3C291C4CC50A00556E14 /* aaaaa.m in Sources */,
 				C25DF0BE1C4C817A007BE533 /* SelectTableViewCell.m in Sources */,
 				6A3C92681C48E76800A65B5C /* ViewController.m in Sources */,
 				C25DF0B81C4C817A007BE533 /* NewsTableViewController.m in Sources */,
 				6A3C92651C48E76800A65B5C /* AppDelegate.m in Sources */,
+				6A1A3C371C4CCE1500556E14 /* README.md in Sources */,
 				C25DF0BC1C4C817A007BE533 /* SelectTableViewController.m in Sources */,
 				C25DF0B41C4C817A007BE533 /* MoveTableViewController.m in Sources */,
-				6A1A3C2C1C4CC51800556E14 /* aaaaaaaa.m in Sources */,
+				6A05E7551C4CEBFA009CEFDE /* SelectShare.m in Sources */,
 				C25DF0B91C4C817A007BE533 /* News.m in Sources */,
 				6A3C92621C48E76800A65B5C /* main.m in Sources */,
 			);
