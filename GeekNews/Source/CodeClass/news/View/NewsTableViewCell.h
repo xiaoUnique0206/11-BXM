@@ -2,7 +2,7 @@
 //  NewsTableViewCell.h
 //  GeekNews
 //
-//  Created by fanyanqing on 16/1/18.
+//  Created by lanou3g on 16/1/19.
 //  Copyright © 2016年 tusm. All rights reserved.
 //
 
@@ -10,12 +10,17 @@
 
 @interface NewsTableViewCell : UITableViewCell
 
-@property(strong,nonatomic)UILabel *subTitleLab;
-@property(strong,nonatomic)UILabel *timeLab;
-@property(strong,nonatomic)UILabel *titleLab;
-@property(strong,nonatomic)UILabel *tagLab;
-@property(strong,nonatomic)UIImageView *imgView;
-@property(strong,nonatomic)ArticleItem *item;
-//@property(strong,nonatomic)<#NSObject#> *<#obj#>;
+@property (weak, nonatomic) IBOutlet UIImageView *infoImgView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImgView;
+
+@property (weak, nonatomic) IBOutlet UILabel *iconLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *dataLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+
+@property(strong,nonatomic)ArticleItem *artieleModel;
 
 @end

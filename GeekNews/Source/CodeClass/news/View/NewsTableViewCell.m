@@ -2,74 +2,85 @@
 //  NewsTableViewCell.m
 //  GeekNews
 //
-//  Created by fanyanqing on 16/1/18.
+//  Created by lanou3g on 16/1/19.
 //  Copyright © 2016年 tusm. All rights reserved.
 //
 
 #import "NewsTableViewCell.h"
 
-#define NEWS_GAP (W/40)
-#define NEWS_W (W-2*NEWS_GAP)
-#define NEWS_H ((H-206)/2-2*NEWS_GAP)
-
 @implementation NewsTableViewCell
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self)
-    {
-        [self drawView];
-    }
-    return self;
+#define iconURL @"http://imgcdn3.newsrep.net/icon.img?t=provider&id="
+
+
+- (void)awakeFromNib {
+    
 }
 
-- (void)drawView
-{
-    [self.contentView addSubview:self.subTitleLab];
-    [self.contentView addSubview:self.titleLab];
-    [self.contentView addSubview:self.imgView];
-    [self.contentView addSubview:self.tagLab];
-}
--(UILabel *)subTitleLab
-{
-    if (!_subTitleLab)
-    {
-        _subTitleLab = [[UILabel alloc] initWithFrame:CGRectMake(NEWS_GAP, NEWS_GAP, NEWS_W/2, 30)];
+-(void)setArtieleModel:(ArticleItem *)artieleModel{
+    
+    if (_artieleModel != artieleModel) {
+        _artieleModel = nil;
+        _artieleModel = artieleModel;
     }
-    return _subTitleLab;
-}
--(UILabel *)titleLab
-{
-    if (!_titleLab)
-    {
-        _titleLab = [[UILabel alloc] initWithFrame:CGRectMake(NEWS_GAP, CGRectGetMaxY(self.subTitleLab.frame)+NEWS_GAP, NEWS_W, 35)];
+    self.titleLabel.text = _artieleModel.Title;
+    [self.iconImgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@&w=20",iconURL,_artieleModel.ProviderId]]];
+    self.iconLabel.text = _artieleModel.ProviderName;
+    
+    //计算发布时间
+    NSString *dateString = [_artieleModel.PubDate stringByReplacingOccurrencesOfString:@"T" withString:@" "];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *foundDate = [dateFormatter dateFromString:dateString];
+    foundDate = [foundDate dateByAddingTimeInterval:8*60*60];
+    NSTimeInterval intervalSS = [[NSDate date] timeIntervalSinceDate:foundDate];
+    NSInteger mm =  intervalSS/60;
+    if (mm >= 60) {
+        mm = mm/60;
+        self.dataLabel.text = [NSString stringWithFormat:@"%ld小时以前",mm];
+    } else {
+        self.dataLabel.text = [NSString stringWithFormat:@"%ld分钟以前",mm];
     }
-    return _titleLab;
+  
+    
+//    NSMutableArray *infoImgArray = [[NSMutableArray alloc]init];
+//    @try {
+//        for (NSDictionary *dict in _artieleModel.mes) {
+//            
+//            [infoImgArray addObject:[NSString stringWithFormat:@"%@",[dict objectForKey:@"Url"]]];
+//            //        NSLog(@"-%@",[dict objectForKey:@"Url"]);
+//            //        NSLog(@"-----------");
+//        }
+//    }
+//    @catch (NSException *exception) {
+//         NSLog(@"%@",infoImgArray);
+//    }
+//    @finally {
+//        NSLog(@"不行!!!");
+//    }
+//    NSString *str = [infoImgArray firstObject];
+//NSLog(@"%@",str);
+    
+//    NSString *str = nil;
+//    @try {
+//         str = [NSString stringWithFormat:@"%@", [(NSArray*)_artieleModel.mes firstObject]];
+//        NSLog(@"%@",str);
+//    }
+//    @catch (NSException *exception) {
+//        [self.infoImgView sd_setImageWithURL:[NSURL URLWithString:str]];
+//    }
+//    @finally {
+//        
+//    }
+    
+   
+//    [self.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",infoImgArray[0]]]];
+    
+    [self.infoImgView sd_setImageWithURL:[NSURL URLWithString:_artieleModel.mes]];
+    
 }
--(UIImageView *)imgView
-{
-    if (!_imgView)
-    {
-        _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(NEWS_GAP, CGRectGetMaxY(self.titleLab.frame)+NEWS_GAP, NEWS_W, 200)];
-    }
-    return _imgView;
-}
--(void)setItem:(ArticleItem *)item
-{
- if ( _item != item)
-    {
-        _item = nil;
-        _item = item;
-    }
-    self.subTitleLab.text = _item.ProviderName;
-    self.titleLab.text = _item.Title;
-        NSLog(@"urlString:%@",_item.picUrl);
-//    [self.imgView sd_setImageWithURL:[NSURL URLWithString:_item.picUrl]];
-}
-- (void)awakeFromNib {
-    // Initialization code
-}
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

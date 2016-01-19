@@ -36,7 +36,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
-    self.window.backgroundColor = [UIColor cyanColor];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window setRootViewController:tabBar];
     return YES;
 }

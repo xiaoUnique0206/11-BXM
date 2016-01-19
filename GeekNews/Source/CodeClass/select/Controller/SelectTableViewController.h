@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SelectTableViewController : UITableViewController
-@property(nonatomic,strong)NSMutableArray *dataArray;
+
 @end

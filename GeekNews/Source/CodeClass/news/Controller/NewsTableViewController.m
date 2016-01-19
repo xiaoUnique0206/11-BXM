@@ -15,7 +15,8 @@
 @end
 
 @implementation NewsTableViewController
-static NSString *const identifer = @"idhskvfdsguyv";
+
+static NSString *const NewsIdentifer = @"newsIdentifer";
 
 -(instancetype)initWithStyle:(UITableViewStyle)style
 {
@@ -24,20 +25,9 @@ static NSString *const identifer = @"idhskvfdsguyv";
     {
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的新闻" image:[UIImage imageNamed:@"iconfont-home(1).png"] tag:1001];
         self.dataArr = [NSArray array];
-        
+        [self loadData];
     }
     return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-    [self.tableView registerClass:[NewsTableViewCell class] forCellReuseIdentifier:identifer];
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [self loadData];
 }
 
 - (void)loadData
@@ -58,52 +48,55 @@ static NSString *const identifer = @"idhskvfdsguyv";
             {
                 ArticleItem *item = [[ArticleItem alloc] init];
                 [item setValuesForKeysWithDictionary:subDict];
-                //NSLog(@"item:%@",item);
                 [dataArr addObject:item];
             }
             self.dataArr = dataArr;
 
         }
-        [self.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+           
+            [self.tableView reloadData];
+        });
     }];
 }
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"NewsTableViewCell" bundle:nil] forCellReuseIdentifier:NewsIdentifer];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 10;
 
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-    NSLog(@"count:%ld",self.dataArr.count);
+
     return self.dataArr.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer forIndexPath:indexPath];
-    
-    ArticleItem *item = [[ArticleItem alloc] init];
-    item = self.dataArr[indexPath.row];
-    cell.item = item;
-    
-    // Configure the cell...
+    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NewsIdentifer  forIndexPath:indexPath];
+    cell.artieleModel = self.dataArr[indexPath.row];
     
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return (H-206)/2;
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 120;
+//}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

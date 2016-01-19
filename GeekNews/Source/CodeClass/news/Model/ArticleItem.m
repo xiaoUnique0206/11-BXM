@@ -15,8 +15,7 @@
     if ([key isEqualToString:@"Medias"])
     {
         self.mes = [value objectForKey:@"Media"];
-//        NSDictionary *dict = self.mes[self.mes.count-1];
-//        self.picUrl = [dict objectForKey:@"Url"];
+
     }
     else if ([key isEqualToString:@"Tags"])
     {
