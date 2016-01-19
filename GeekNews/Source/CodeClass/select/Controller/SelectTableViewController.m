@@ -53,10 +53,6 @@ static NSString *const ident = @"cell";
                 NSDictionary *dic3 = [dic2 objectForKey:@"Articles"];
                 NSArray *array=[dic3 objectForKey:@"Article"];
                 for (NSDictionary *diction in array) {
-                    NSDictionary *dic4 = [diction objectForKey:@"Medias"];
-                    NSDictionary *dic5 = [dic4 objectForKey:@"Media"];
-                    Select *select1 = [Select new];
-                    [select1 setValuesForKeysWithDictionary:dic5];
                     Select *select = [Select new];
                     [select setValuesForKeysWithDictionary:diction];
                     [self.dataArray addObject:select];
@@ -84,7 +80,6 @@ static NSString *const ident = @"cell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"个数==%ld",self.dataArray.count);
     return self.dataArray.count;
 }
 

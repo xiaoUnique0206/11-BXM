@@ -69,6 +69,44 @@
 }
 - (void)awakeFromNib {
     // Initialization code
+  
+    
+//    NSMutableArray *infoImgArray = [[NSMutableArray alloc]init];
+//    @try {
+//        for (NSDictionary *dict in _artieleModel.mes) {
+//            
+//            [infoImgArray addObject:[NSString stringWithFormat:@"%@",[dict objectForKey:@"Url"]]];
+//            //        NSLog(@"-%@",[dict objectForKey:@"Url"]);
+//            //        NSLog(@"-----------");
+//        }
+//    }
+//    @catch (NSException *exception) {
+//         NSLog(@"%@",infoImgArray);
+//    }
+//    @finally {
+//        NSLog(@"不行!!!");
+//    }
+//    NSString *str = [infoImgArray firstObject];
+//NSLog(@"%@",str);
+    
+//    NSString *str = nil;
+//    @try {
+//         str = [NSString stringWithFormat:@"%@", [(NSArray*)_artieleModel.mes firstObject]];
+//        NSLog(@"%@",str);
+//    }
+//    @catch (NSException *exception) {
+//        [self.infoImgView sd_setImageWithURL:[NSURL URLWithString:str]];
+//    }
+//    @finally {
+//        
+//    }
+    
+   
+//    [self.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",infoImgArray[0]]]];
+    
+//    [self.infoImgView sd_setImageWithURL:[NSURL URLWithString:_artieleModel.mes]];
+    
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
