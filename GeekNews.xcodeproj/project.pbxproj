@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6A05E7571C4D0D90009CEFDE /* iconfont-wangluokeji.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A05E7561C4D0D90009CEFDE /* iconfont-wangluokeji.png */; };
-		6A05E75E1C4D0E4E009CEFDE /* SelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A05E75C1C4D0E4E009CEFDE /* SelectTableViewCell.m */; };
-		6A05E75F1C4D0E4E009CEFDE /* SelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A05E75D1C4D0E4E009CEFDE /* SelectTableViewCell.xib */; };
 		6A05E7621C4D0E5E009CEFDE /* Select.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A05E7611C4D0E5E009CEFDE /* Select.m */; };
 		6A05E7641C4E12B6009CEFDE /* iconfont-shijian.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A05E7631C4E12B6009CEFDE /* iconfont-shijian.png */; };
+		6A05E7681C4E2FFF009CEFDE /* SelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A05E7661C4E2FFF009CEFDE /* SelectTableViewCell.m */; };
+		6A05E7691C4E2FFF009CEFDE /* SelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A05E7671C4E2FFF009CEFDE /* SelectTableViewCell.xib */; };
+		6A05E76C1C4E5327009CEFDE /* cf50ab3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A05E76B1C4E5327009CEFDE /* cf50ab3.png */; };
 		DF4CD6281C4C7979001D8204 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4CD6271C4C7979001D8204 /* main.m */; };
 		DF4CD62B1C4C7979001D8204 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4CD62A1C4C7979001D8204 /* AppDelegate.m */; };
 		DF4CD62E1C4C7979001D8204 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4CD62D1C4C7979001D8204 /* ViewController.m */; };
@@ -54,12 +55,13 @@
 
 /* Begin PBXFileReference section */
 		6A05E7561C4D0D90009CEFDE /* iconfont-wangluokeji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-wangluokeji.png"; sourceTree = "<group>"; };
-		6A05E75B1C4D0E4E009CEFDE /* SelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTableViewCell.h; sourceTree = "<group>"; };
-		6A05E75C1C4D0E4E009CEFDE /* SelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTableViewCell.m; sourceTree = "<group>"; };
-		6A05E75D1C4D0E4E009CEFDE /* SelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectTableViewCell.xib; sourceTree = "<group>"; };
 		6A05E7601C4D0E5E009CEFDE /* Select.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Select.h; sourceTree = "<group>"; };
 		6A05E7611C4D0E5E009CEFDE /* Select.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Select.m; sourceTree = "<group>"; };
 		6A05E7631C4E12B6009CEFDE /* iconfont-shijian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-shijian.png"; sourceTree = "<group>"; };
+		6A05E7651C4E2FFF009CEFDE /* SelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTableViewCell.h; sourceTree = "<group>"; };
+		6A05E7661C4E2FFF009CEFDE /* SelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTableViewCell.m; sourceTree = "<group>"; };
+		6A05E7671C4E2FFF009CEFDE /* SelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectTableViewCell.xib; sourceTree = "<group>"; };
+		6A05E76B1C4E5327009CEFDE /* cf50ab3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cf50ab3.png; sourceTree = "<group>"; };
 		DF4CD6231C4C7979001D8204 /* GeekNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4CD6271C4C7979001D8204 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF4CD6291C4C7979001D8204 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A05E76A1C4E5327009CEFDE /* picture */ = {
+			isa = PBXGroup;
+			children = (
+				6A05E76B1C4E5327009CEFDE /* cf50ab3.png */,
+			);
+			path = picture;
+			sourceTree = "<group>";
+		};
 		DF4CD61A1C4C7979001D8204 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +258,7 @@
 		DF4CD64A1C4C79B6001D8204 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6A05E76A1C4E5327009CEFDE /* picture */,
 				DF9FC9731C4CCEE900BB3655 /* tabBarButtonBG */,
 			);
 			path = Resources;
@@ -396,9 +407,9 @@
 		DF9FC96B1C4CC9C600BB3655 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6A05E75B1C4D0E4E009CEFDE /* SelectTableViewCell.h */,
-				6A05E75C1C4D0E4E009CEFDE /* SelectTableViewCell.m */,
-				6A05E75D1C4D0E4E009CEFDE /* SelectTableViewCell.xib */,
+				6A05E7651C4E2FFF009CEFDE /* SelectTableViewCell.h */,
+				6A05E7661C4E2FFF009CEFDE /* SelectTableViewCell.m */,
+				6A05E7671C4E2FFF009CEFDE /* SelectTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,13 +552,14 @@
 				DF9FC97E1C4CCEE900BB3655 /* iconfont-home(1).png in Resources */,
 				DF4CD6311C4C797A001D8204 /* Main.storyboard in Resources */,
 				6A05E7641C4E12B6009CEFDE /* iconfont-shijian.png in Resources */,
-				6A05E75F1C4D0E4E009CEFDE /* SelectTableViewCell.xib in Resources */,
 				DF9FC9831C4CCEE900BB3655 /* iconfont-more.png in Resources */,
 				DF9FC9801C4CCEE900BB3655 /* iconfont-item(1).png in Resources */,
+				6A05E76C1C4E5327009CEFDE /* cf50ab3.png in Resources */,
 				6A05E7571C4D0D90009CEFDE /* iconfont-wangluokeji.png in Resources */,
 				DF9FC97F1C4CCEE900BB3655 /* iconfont-home.png in Resources */,
 				DF9FC97C1C4CCEE900BB3655 /* iconfont-bolt(1).png in Resources */,
 				DF9FC9821C4CCEE900BB3655 /* iconfont-more(1).png in Resources */,
+				6A05E7691C4E2FFF009CEFDE /* SelectTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +576,7 @@
 				DF9FC93B1C4CC1CE00BB3655 /* DataRequestTool.m in Sources */,
 				DF9FC9B81C4CE50300BB3655 /* UIButton+WebCache.m in Sources */,
 				DF9FC9B51C4CE50300BB3655 /* SDWebImageDownloaderOperation.m in Sources */,
-				6A05E75E1C4D0E4E009CEFDE /* SelectTableViewCell.m in Sources */,
+				6A05E7681C4E2FFF009CEFDE /* SelectTableViewCell.m in Sources */,
 				DF9FC98B1C4CD35E00BB3655 /* README.md in Sources */,
 				DF9FC9B11C4CE50300BB3655 /* SDImageCache.m in Sources */,
 				DF9FC9B01C4CE50300BB3655 /* NSData+ImageContentType.m in Sources */,

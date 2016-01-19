@@ -14,5 +14,9 @@
 @property(nonatomic,strong)NSString *ProviderName;
 @property(nonatomic,strong)NSString *Title;
 @property(nonatomic,strong)NSString *Link;
+@property(nonatomic,strong)NSString *Url;
+
+
+
 
 @end

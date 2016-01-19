@@ -20,37 +20,57 @@ static NSString *const ident = @"cell";
     if (self)
     {
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"精选" image:[UIImage imageNamed:@"iconfont-wangluokeji"] tag:1002];
+        self.dataArray = [NSMutableArray array];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStyleDone target:self action:@selector(refresh:)];
+
     }
     return self;
+}
+- (void)refresh:(UIBarButtonItem *)btn
+{
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor cyanColor];
+    [self.tableView registerNib:[UINib nibWithNibName:@"SelectTableViewCell" bundle:nil] forCellReuseIdentifier:ident];
+    [self loading];
+
+}
+- (void)loading{
     [[DataRequestTool shareData] getDataWithURL:SELECTURL andBlock:^(NSData *data) {
         NSError *error = nil;
         NSDictionary *dict = [XMLReader dictionaryForXMLData:data error:&error];
         if (error) {
             NSLog(@"错误是:%@",error);
         }else{
-            NSDictionary *dataDict = [dict objectForKey:@"Articles"];
-            NSArray *array=[dataDict objectForKey:@"Article"];
-
-            self.dataArray = [NSMutableArray array];
-            for (NSDictionary *diction in array) {
-                Select *select = [Select new];
-                [select setValuesForKeysWithDictionary:diction];
-                [self.dataArray addObject:select];
-                NSLog(@"====%@",self.dataArray);
+            [dict writeToFile:@"/Users/songqingliang/Desktop/test.plist" atomically:YES];
+            NSDictionary *dic1 = [dict objectForKey:@"Tags"];
+            NSDictionary *array1 = [dic1 objectForKey:@"Tag"];
+            for (NSDictionary *dic2 in array1) {
+                NSDictionary *dic3 = [dic2 objectForKey:@"Articles"];
+                NSArray *array=[dic3 objectForKey:@"Article"];
+                for (NSDictionary *diction in array) {
+                    NSDictionary *dic4 = [diction objectForKey:@"Medias"];
+                    NSDictionary *dic5 = [dic4 objectForKey:@"Media"];
+                    Select *select1 = [Select new];
+                    [select1 setValuesForKeysWithDictionary:dic5];
+                    Select *select = [Select new];
+                    [select setValuesForKeysWithDictionary:diction];
+                    [self.dataArray addObject:select];
+                    
+                }
+                
             }
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
         });
     }];
-    [self.tableView registerNib:[UINib nibWithNibName:@"SelectTableViewCell" bundle:nil] forCellReuseIdentifier:ident];
-}
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -64,19 +84,21 @@ static NSString *const ident = @"cell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    NSLog(@"个数==%ld",self.dataArray.count);
     return self.dataArray.count;
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return 65;
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SelectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident forIndexPath:indexPath];
-    
-    
+    Select *select = self.dataArray[indexPath.row];
+    cell.select = select;
+    NSLog(@"%@",select);
     return cell;
+
 }
 
 

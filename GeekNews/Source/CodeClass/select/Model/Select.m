@@ -11,10 +11,14 @@
 @implementation Select
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
+    if ([key isEqualToString:@"Medias"]) {
+        self.Url = [value objectForKey:@"Media"][@"Url"];
+    }
 }
 
-
+- (NSString *)description{
+    return [NSString stringWithFormat:@"====%@",_ProviderName];
+}
 
 
 

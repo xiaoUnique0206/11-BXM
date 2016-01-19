@@ -2,7 +2,7 @@
 //  SelectTableViewCell.m
 //  GeekNews
 //
-//  Created by 宋庆亮 on 16/1/18.
+//  Created by 宋庆亮 on 16/1/19.
 //  Copyright © 2016年 tusm. All rights reserved.
 //
 
@@ -12,6 +12,9 @@
 
 - (void)setSelect:(Select *)select{
     self.provideLabel.text = select.ProviderName;
+    self.titleLabel.text = select.Title;
+    [self.titleImaView sd_setImageWithURL:[NSURL URLWithString:select.Url]];
+    [self.provideImaView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://imgcdn3.newsrep.net/icon.img?t=provider&id=%@&w=36",select.ProviderId]]placeholderImage:[UIImage imageNamed:@"cf50ab3.png"]];
     
 }
 
