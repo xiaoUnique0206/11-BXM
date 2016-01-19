@@ -11,7 +11,7 @@
 @interface SelectTableViewController ()
 
 @end
-static NSString *const ident = @"cell";
+
 @implementation SelectTableViewController
 
 -(instancetype)initWithStyle:(UITableViewStyle)style
@@ -19,26 +19,21 @@ static NSString *const ident = @"cell";
     self = [super initWithStyle:style];
     if (self)
     {
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"精选" image:[UIImage imageNamed:@"iconfont-wangluokeji"] tag:1002];
-        self.dataArray = [NSMutableArray array];
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStyleDone target:self action:@selector(refresh:)];
-
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"精选" image:[UIImage imageNamed:@"iconfont-bolt(1).png"] tag:1002];
     }
     return self;
-}
-- (void)refresh:(UIBarButtonItem *)btn
-{
-    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor cyanColor];
-    [self.tableView registerNib:[UINib nibWithNibName:@"SelectTableViewCell" bundle:nil] forCellReuseIdentifier:ident];
-    [self loading];
-
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+<<<<<<< HEAD
 - (void)loading{
     [[DataRequestTool shareData] getDataWithURL:SELECTURL andBlock:^(NSData *data) {
         NSError *error = nil;
@@ -65,8 +60,9 @@ static NSString *const ident = @"cell";
             [self.tableView reloadData];
         });
     }];
+=======
+>>>>>>> e2fa2c936676b4f306705652ea7857951c2c38dc
 
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -75,27 +71,32 @@ static NSString *const ident = @"cell";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+<<<<<<< HEAD
     return self.dataArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
+=======
+#warning Incomplete implementation, return the number of rows
+    return 0;
+>>>>>>> e2fa2c936676b4f306705652ea7857951c2c38dc
 }
 
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SelectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident forIndexPath:indexPath];
-    Select *select = self.dataArray[indexPath.row];
-    cell.select = select;
-    NSLog(@"%@",select);
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
     return cell;
-
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
