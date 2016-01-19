@@ -76,7 +76,7 @@
    
 //    [self.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",infoImgArray[0]]]];
     
-    [self.infoImgView sd_setImageWithURL:[NSURL URLWithString:_artieleModel.mes]];
+//    [self.infoImgView sd_setImageWithURL:[NSURL URLWithString:_artieleModel.mes]];
     
 }
 
