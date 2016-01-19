@@ -24,9 +24,20 @@ static NSString *const identifer = @"idhskvfdsguyv";
     {
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的新闻" image:[UIImage imageNamed:@"iconfont-home(1).png"] tag:1001];
         self.dataArr = [NSArray array];
-        [self loadData];
+        
     }
     return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor redColor];
+    [self.tableView registerClass:[NewsTableViewCell class] forCellReuseIdentifier:identifer];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self loadData];
 }
 
 - (void)loadData
@@ -47,7 +58,7 @@ static NSString *const identifer = @"idhskvfdsguyv";
             {
                 ArticleItem *item = [[ArticleItem alloc] init];
                 [item setValuesForKeysWithDictionary:subDict];
-                NSLog(@"item:%@",item);
+                //NSLog(@"item:%@",item);
                 [dataArr addObject:item];
             }
             self.dataArr = dataArr;
@@ -56,16 +67,7 @@ static NSString *const identifer = @"idhskvfdsguyv";
         [self.tableView reloadData];
     }];
 }
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.tableView registerClass:[NewsTableViewCell class] forCellReuseIdentifier:identifer];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
